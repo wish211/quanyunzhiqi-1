@@ -5,9 +5,11 @@ interface FeaturesProps {
   onChatClick: () => void;
   onFolkloreClick: () => void;
   onHistoryClick: () => void;
+  onRoutesClick: () => void;
+  onLocalChroniclesClick: () => void;
 }
 
-const Features: React.FC<FeaturesProps> = ({ onChatClick, onFolkloreClick, onHistoryClick }) => {
+const Features: React.FC<FeaturesProps> = ({ onChatClick, onFolkloreClick, onHistoryClick, onRoutesClick, onLocalChroniclesClick }) => {
   const features = [
     {
       icon: MessageCircle,
@@ -21,7 +23,7 @@ const Features: React.FC<FeaturesProps> = ({ onChatClick, onFolkloreClick, onHis
       title: '文化旅游路线',
       description: '个性化文化探索旅程规划，深度体验济南文化魅力',
       color: 'bg-green-600',
-      action: () => {}
+      action: onRoutesClick
     },
     {
       icon: BookOpen,
@@ -35,7 +37,7 @@ const Features: React.FC<FeaturesProps> = ({ onChatClick, onFolkloreClick, onHis
       title: '地方志检索解读',
       description: '古籍文献智能检索，AI解读历史文献精髓',
       color: 'bg-amber-600',
-      action: () => {}
+      action: onLocalChroniclesClick
     },
     {
       icon: Users,
